@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Rokkitt";
+    src: url("../font/Rokkitt-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #424242;
+}
+
+
+@media only screen and (max-width: 375px) {
+    
+    body .screen{
+        text-align: center;
+    }
+    
+    body .screen .music-default {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-top: 5%;
+        width: 200px;
+        height: 200px;
+        border-radius: 5%;
+    }
+    
+    body .screen .info{
+        margin-top: 2%;
+    }
+    
+    body .screen .info #song-name{
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        font-family: Rokkitt;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 27px;
+    
+        color: #858585;
+    
+    
+    }
+    
+    
+    body .screen .info #song-author{
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+        font-family: Rokkitt;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        color: #969191;
+    }
+    
+    body .audio-control{
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: Rokkitt;
+        margin-top: 10%;
+        background: rgba(89, 87, 87, 0.71);
+        border-radius: 15px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding-bottom: 6%;
+    }
+    body .audio-control .buttons .audio-control-btn-main    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    body .audio-control .buttons .audio-control-btn-main span{
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 2rem;
+    }
+    
+    
+    body .audio-control .buttons .audio-control-btn-main #audio-pause-btn{
+        display: none;
+    }
+    
+    body .audio-control .slider-container span{
+        font-size: 12px;
+        padding-left: 2px;
+        padding-right: 2px;
+        color: #979797;
+    }
+    
+    body .audio-control .slider-container .slider{
+        -webkit-appearance: none;
+        margin-top: 10px;
+        width: 79%;
+        height: 5px;
+        border-radius: 5px;
+        background: #8D8D8D;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+      }
+      
+      .slider:hover {
+        opacity: 1;
+      }
+      
+    body .audio-control .slider-container .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #C4C4C4;
+        cursor: pointer;
+      }
+      
+      body .audio-control .slider-container .slider::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #C4C4C4;
+        cursor: pointer;
+      }
+}    

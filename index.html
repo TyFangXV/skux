@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="src//icon/apple-icon-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#424242"/>
+    <meta name="description" content="Skux, a music player made for your playlist">
+    <link rel="manifest" href="./manfiest.json">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="./src/js/preloader.js"></script>       
+<title>Skux</title>
+</head>
+<body>
+    <div>
+        <div id="screen" class="screen">
+            <img src="./src/image/image-alt.png" class="music-default" alt="image-player">
+            <div class="info">
+                <p id="song-name">"Unknown"</p>
+                <p id="song-author">-unknown</p>
+            </div>
+        </div>
+        <div id="audio-control" class="audio-control">
+                <span class="buttons">
+                    <span class="audio-control-btn-main" id="audio-control-btn-main">                      
+                        <span class="material-icons" id="audio-back-btn">skip_previous</span>
+                        <span class="material-icons" id="audio-pause-btn">pause</span>
+                        <span class="material-icons" id="audio-play-btn">play_arrow</span>
+                        <span class="material-icons" id="audio-next-btn">skip_next</span>
+                    </span>                   
+                </span>
+            <span class="slider-container">
+                <span class="audio-start" id="audio-start">0:0</span>
+                <audio src="" type="audio/mpeg" id="audio-player" class="audio-player"  preload="metadata"></audio>
+                <input type="range" min="0" max="0" value="0" class="slider" id="slider">
+                <span class="audio-end" id="audio-end">0:0</span>                  
+            </span>
+        </div>
+        <div class="suggestion">
+            
+        </div>        
+    </div>
+    
+    
+    <script src="./src/js/core/metaData.js"></script>
+    <script src="src/js/core/audio.js" ></script>
+    <script src="./src/js/core/song.js" ></script>
+    <script src="./src/js/core/background.js"></script>
+</body>
+</html>
