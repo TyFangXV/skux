@@ -13,6 +13,7 @@ playbtn.addEventListener("click", ()=>{
     playbtn.style.display = "none";
     pauseBtn.style.display = "block";
     audioPlaying = true;
+    console.log(`audio playing ${audioPlaying}`)
 })
     
     
@@ -21,10 +22,11 @@ pauseBtn.addEventListener("click", ()=>{
     pauseBtn.style.display = "none";
     playbtn.style.display = "block";
     audioPlaying = false;
+    console.log(`audio playing ${audioPlaying}`)
 })
 
 
-
+console.log(JSON.parse(window.localStorage.getItem("files"))[0])
 
 audioSlider.addEventListener("input", ()=>{
     audioPlayer.currentTime =  audioSlider.value
@@ -32,13 +34,15 @@ audioSlider.addEventListener("input", ()=>{
 
 
 document.addEventListener("visibilitychange", function() {
- if(document.visibilityState !== "visible")
-   {
-       if(audioPlaying)
-         {
-             audioPlayer.play()
-         }
-   }
+    if(audioPlaying)
+    {
+        if(document.visibilityState === "hidden")
+        {
+            console.log(document.visibilityState)
+            audioPlayer.play()
+            console.log("bg playing")
+        }
+    }
 });
 
 

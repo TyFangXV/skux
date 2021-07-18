@@ -4,5 +4,3 @@ if('serviceWorker' in navigator)
     .then(res => console.log("sw registered"))
     .catch(err => console.log("sw failed to registed"))
 }
-
-console.log(typeof windows)

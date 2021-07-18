@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "Rokkitt";
-    src: url("../font/Rokkitt-Regular.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
 
 *{
     margin: 0;
@@ -22,8 +19,8 @@ body{
     body .screen .music-default {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         margin-top: 5%;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 5%;
     }
     
@@ -55,38 +52,90 @@ body{
     }
     
     body .audio-control{
-        margin-left: 5px;
-        margin-right: 5px;
-        font-family: Rokkitt;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: Rokkitt;   
         margin-top: 10%;
         background: rgba(89, 87, 87, 0.71);
         border-radius: 15px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding-bottom: 6%;
+        padding-bottom: 5%;
     }
-    body .audio-control .buttons .audio-control-btn-main    {
+
+    body .screen .music-default::-webkit-media-controls-play-button{
+        display: none;
+    }
+
+    body .screen .music-default::-webkit-media-controls-volume-slider {
+        display: none;
+    }
+
+    body .screen .music-default::-webkit-media-controls-mute-button{
+        display: none;
+    }
+
+    body .screen .music-default::-webkit-media-controls-timeline {
+        display: none;
+    }
+
+    body .screen .music-default::-webkit-media-controls-current-time-display {
+        display: none;
+    }
+
+    body .screen .music-default::-webkit-media-controls-panel{
+        display: none;
+    }
+
+    body .audio-control .buttons .audio-control-btn-main .side-controls{
+        position: relative;
+    }
+    
+    body .audio-control .buttons .audio-control-btn-main .side-controls #setting-btn{
+        text-decoration: none;
+        float: left;
+        color: black;       
+        padding-left: 3px;
+        padding-top: 3px;
+        font-size: 22.5px;
+    }
+
+    body .audio-control .buttons .audio-control-btn-main .side-controls #audio-filteration-btn{
+       float: right;
+       padding-right: 3px;
+       padding-top: 3px;
+    }
+
+
+    body .audio-control .buttons .audio-control-btn-main .center{
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     
-    body .audio-control .buttons .audio-control-btn-main span{
+    body .audio-control .buttons .audio-control-btn-main .center span{
         padding-left: 15px;
         padding-right: 15px;
         font-size: 2rem;
     }
     
     
-    body .audio-control .buttons .audio-control-btn-main #audio-pause-btn{
+    body .audio-control .buttons .audio-control-btn-main .center #audio-pause-btn{
         display: none;
     }
-    
-    body .audio-control .slider-container span{
+ 
+    body .audio-control .slider-container #audio-start{
         font-size: 12px;
-        padding-left: 2px;
-        padding-right: 2px;
+        padding-left: 5px;
         color: #979797;
     }
+
+
+    body .audio-control .slider-container #audio-end{
+        font-size: 12px;
+        color: #979797;
+    }
+
     
     body .audio-control .slider-container .slider{
         -webkit-appearance: none;

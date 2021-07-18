@@ -17,7 +17,7 @@
 <body>
     <div>
         <div id="screen" class="screen">
-            <img src="./src/image/image-alt.png" class="music-default" alt="image-player">
+            <video src="" controls id="audio-player" class="music-default"  preload="metadata"></video>
             <div class="info">
                 <p id="song-name">"Unknown"</p>
                 <p id="song-author">-unknown</p>
@@ -25,18 +25,23 @@
         </div>
         <div id="audio-control" class="audio-control">
                 <span class="buttons">
-                    <span class="audio-control-btn-main" id="audio-control-btn-main">                      
+                    <span class="audio-control-btn-main" id="audio-control-btn-main"> 
+                      <span class="side-controls">
+                        <a href="./setting.html" class="material-icons" id="setting-btn">settings</a>
+                        <span class="material-icons" id="audio-filteration-btn">shuffle</span>
+                      </span>  
+                     <span class="center">
                         <span class="material-icons" id="audio-back-btn">skip_previous</span>
                         <span class="material-icons" id="audio-pause-btn">pause</span>
                         <span class="material-icons" id="audio-play-btn">play_arrow</span>
-                        <span class="material-icons" id="audio-next-btn">skip_next</span>
+                        <span class="material-icons" id="audio-next-btn">skip_next</span>                         
+                     </span>
                     </span>                   
                 </span>
             <span class="slider-container">
-                <span class="audio-start" id="audio-start">0:0</span>
-                <audio src="" type="audio/mpeg" id="audio-player" class="audio-player"  preload="metadata"></audio>
+                <span class="audio-start" id="audio-start">00:00</span>
                 <input type="range" min="0" max="0" value="0" class="slider" id="slider">
-                <span class="audio-end" id="audio-end">0:0</span>                  
+                <span class="audio-end" id="audio-end">00:00</span>                  
             </span>
         </div>
         <div class="suggestion">
